@@ -1,35 +1,16 @@
 
-const badguy = document.getElementById('badguy');
-debugger;
-while(1) {
-    let info = badguy.style.right;
 
+while (true) {
+    let info = badguy.style.right;
     info = parseInt(info) + 10;
-    badguy.style.transition = '5s';
+    badguy.style.transition = '3s';
     if (info >= document.body.clientHeight) {
         break;
     }
-
     info = info + "px";
     badguy.style.right = info;
 }
 
-
-function handleKeyDown(data) {
-    if (data == 'ArrowRight') {
-
-        moveRight();
-    }
-    if (data == 'ArrowLeft') {
-        moveLeft();
-    }
-    if (data == 'ArrowUp') {
-        moveUp();
-    }
-    if (data == 'ArrowDown') {
-        moveDown();
-    }
-}
 function moveRight() {
     const imgElement = document.getElementById('pacman');
     imgElement.style.transform = 'rotateY(0deg)'
@@ -75,3 +56,4 @@ function moveDown() {
     info = info + 'px';
     imgElement.style.top = info;
 }
+
